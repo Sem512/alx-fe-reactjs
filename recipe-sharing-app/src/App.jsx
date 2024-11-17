@@ -1,6 +1,6 @@
 import React from 'react';
 import SearchBar from './components/SearchBar';
-import RecipeList from './components/recipeList';
+import RecipeList from './components/RecipeList';
 import AddRecipeForm from './components/addRecipeForm';
 
 function App() {

@@ -1,17 +1,19 @@
 import React from 'react';
+import FavoritesList from './components/FavoritesList';
+import RecommendationsList from './components/RecommendationsList';
 import SearchBar from './components/SearchBar';
 import RecipeList from './components/RecipeList';
-import AddRecipeForm from './components/addRecipeForm';
 
-function App() {
+const App = () => {
   return (
-    <div style={{ maxWidth: '600px', margin: '0 auto', padding: '2rem' }}>
-      <h1>Recipe Sharing Application</h1>
+    <div>
+      <h1>Recipe Sharing App</h1>
       <SearchBar />
-      <AddRecipeForm />
       <RecipeList />
+      <FavoritesList />
+      <RecommendationsList />
     </div>
   );
-}
+};
 
 export default App;

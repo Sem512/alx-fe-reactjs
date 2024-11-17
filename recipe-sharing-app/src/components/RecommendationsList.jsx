@@ -6,7 +6,7 @@ const RecommendationsList = () => {
   const recommendations = useRecipeStore(state => state.recommendations);
 
   useEffect(() => {
-    generateRecommendations(); // Generate recommendations when component mounts
+    generateRecommendations();
   }, [generateRecommendations]);
 
   return (
@@ -27,4 +27,3 @@ const RecommendationsList = () => {
 };
 
 export default RecommendationsList;
-    

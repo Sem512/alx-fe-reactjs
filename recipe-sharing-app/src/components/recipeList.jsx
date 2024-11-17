@@ -1,31 +1,29 @@
-import React from 'react';
-import useRecipeStore from './recipeStore';
+import { useRecipeStore } from './recipeStore';
 
-const RecipeList = () => {
-  const recipes = useRecipeStore((state) =>
-    state.recipes.filter((recipe) =>
-      recipe.title.toLowerCase().includes(state.searchTerm.toLowerCase())
-    )
-  );
+const RecipeCard = ({ recipe }) => {
+  const addFavorite = useRecipeStore(state => state.addFavorite);
+  const removeFavorite = useRecipeStore(state => state.removeFavorite);
+  const favorites = useRecipeStore(state => state.favorites);
 
-  const renderRecipes = () => {
-    const recipeElements = [];
-    for (let i = 0; i < recipes.length; i++) {
-      recipeElements.push(
-        <div
-          key={recipes[i].id}
-          style={{ border: '1px solid #ccc', padding: '1rem', margin: '0.5rem 0' }}
-        >
-          <h2>{recipes[i].title}</h2>
-          <p>{recipes[i].description}</p>
-        </div>
-      );
+  const isFavorite = favorites.includes(recipe.id);
+
+  const handleFavoriteClick = () => {
+    if (isFavorite) {
+      removeFavorite(recipe.id);
+    } else {
+      addFavorite(recipe.id);
     }
-
-    return recipeElements.length > 0 ? recipeElements : <p>No recipes found!</p>;
   };
 
-  return <div>{renderRecipes()}</div>;
+  return (
+    <div>
+      <h3>{recipe.title}</h3>
+      <p>{recipe.description}</p>
+      <button onClick={handleFavoriteClick}>
+        {isFavorite ? 'Remove from Favorites' : 'Add to Favorites'}
+      </button>
+    </div>
+  );
 };
 
-export default RecipeList;
+export default RecipeCard;

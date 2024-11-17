@@ -1,4 +1,4 @@
-import RecipeList from './components/recipeList';
+import RecipeList from './components/addRecipeStore';
 
 const App = () => {
   return (

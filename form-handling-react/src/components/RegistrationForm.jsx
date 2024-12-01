@@ -42,7 +42,7 @@ const RegistrationForm = () => {
         <input
           type="text"
           name="username"
-          value={formData.username} // Controlled component
+          value={username} // Controlled component
           onChange={handleChange} // Update state
         />
       </div>
@@ -51,7 +51,7 @@ const RegistrationForm = () => {
         <input
           type="email"
           name="email"
-          value={formData.email} // Controlled component
+          value={email} // Controlled component
           onChange={handleChange} // Update state
         />
       </div>
@@ -60,7 +60,7 @@ const RegistrationForm = () => {
         <input
           type="password"
           name="password"
-          value={formData.password} // Controlled component
+          value={password} // Controlled component
           onChange={handleChange} // Update state
         />
       </div>

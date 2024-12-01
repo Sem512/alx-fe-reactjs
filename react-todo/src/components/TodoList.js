@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom/extend-expect';
 
 const initialTodos = [
   { id: 1, text: 'Learn React', completed: false },

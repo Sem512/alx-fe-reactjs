@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 const RegistrationForm = () => {
+  // State to manage form data
   const [formData, setFormData] = useState({
     username: "",
     email: "",
@@ -9,11 +10,13 @@ const RegistrationForm = () => {
 
   const [errors, setErrors] = useState("");
 
+  // Handle input change
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
+  // Validate form
   const validateForm = () => {
     if (!formData.username || !formData.email || !formData.password) {
       setErrors("All fields are required");
@@ -23,6 +26,7 @@ const RegistrationForm = () => {
     return true;
   };
 
+  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
@@ -38,8 +42,8 @@ const RegistrationForm = () => {
         <input
           type="text"
           name="username"
-          value={formData.username}
-          onChange={handleChange}
+          value={formData.username} // Controlled component
+          onChange={handleChange} // Update state
         />
       </div>
       <div>
@@ -47,8 +51,8 @@ const RegistrationForm = () => {
         <input
           type="email"
           name="email"
-          value={formData.email}
-          onChange={handleChange}
+          value={formData.email} // Controlled component
+          onChange={handleChange} // Update state
         />
       </div>
       <div>
@@ -56,8 +60,8 @@ const RegistrationForm = () => {
         <input
           type="password"
           name="password"
-          value={formData.password}
-          onChange={handleChange}
+          value={formData.password} // Controlled component
+          onChange={handleChange} // Update state
         />
       </div>
       {errors && <p style={{ color: "red" }}>{errors}</p>}

@@ -22,6 +22,7 @@ function App() {
           </Route>
           <Route path="/blog/:id" element={<BlogPost />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="/profile" element={ <ProtectedRoute isAuthenticated={true}> <Profile /> </ProtectedRoute> }/>
         </Routes>
       </div>
     </Router>

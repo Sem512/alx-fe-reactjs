@@ -18,7 +18,7 @@ const RegistrationForm = () => {
 
   // Validate form
   const validateForm = () => {
-    if (!formData.username || !formData.email || !formData.password) {
+    if (!username || !email || !password) {
       setErrors("All fields are required");
       return false;
     }

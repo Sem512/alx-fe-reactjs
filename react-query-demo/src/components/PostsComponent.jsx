@@ -1,8 +1,7 @@
 import React from "react";
-import { useQuery, QueryClient, QueryClientProvider } from "react-query";
+import { useQuery } from "react-query";
 
-const queryClient = new QueryClient();
-
+// Function to fetch posts from the API
 const fetchPosts = async () => {
   const response = await fetch("https://jsonplaceholder.typicode.com/posts");
   if (!response.ok) {
@@ -12,10 +11,18 @@ const fetchPosts = async () => {
 };
 
 const PostsComponent = () => {
-  const { data, error, isLoading, isError, refetch } = useQuery({
-    queryKey: ["posts"], // Unique identifier for the query
+  const {
+    data: posts,
+    error,
+    isLoading,
+    isError,
+    refetch,
+  } = useQuery({
+    queryKey: ["posts"], // Unique key for the query
     queryFn: fetchPosts, // Function to fetch data
-    staleTime: 60000, // Cache data for 1 minute
+    cacheTime: 5 * 60 * 1000, // Cache for 5 minutes (default is 5 minutes)
+    refetchOnWindowFocus: false, // Prevent refetching when window regains focus
+    keepPreviousData: true, // Show previous data while fetching new data
   });
 
   if (isLoading) {
@@ -30,7 +37,7 @@ const PostsComponent = () => {
     <div>
       <button onClick={refetch}>Refetch Posts</button>
       <ul>
-        {data.map((post) => (
+        {posts.map((post) => (
           <li key={post.id}>
             <strong>{post.title}</strong>
             <p>{post.body}</p>

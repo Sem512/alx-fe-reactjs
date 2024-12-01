@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
 
 const initialTodos = [
   { id: 1, text: 'Learn React', completed: false },
@@ -13,8 +11,10 @@ const TodoList = () => {
   const [newTodo, setNewTodo] = useState('');
 
   const addTodo = () => {
-    setTodos([...todos, { id: Date.now(), text: newTodo, completed: false }]);
-    setNewTodo('');
+    if (newTodo.trim()) {
+      setTodos([...todos, { id: Date.now(), text: newTodo, completed: false }]);
+      setNewTodo('');
+    }
   };
 
   const toggleTodo = (id) => {

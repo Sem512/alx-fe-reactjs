@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-import TodoList from '../TodoList';
+import TodoList from '../components/TodoList';
 
 test('renders TodoList component', () => {
   render(<TodoList />);
@@ -33,6 +33,6 @@ test('toggles a todo', () => {
 
 test('deletes a todo', () => {
   render(<TodoList />);
-  fireEvent.click(screen.getByText(/Delete/i, { selector: 'button' }));
+  fireEvent.click(screen.getAllByText(/Delete/i)[0]);
   expect(screen.queryByText(/Learn React/i)).not.toBeInTheDocument();
 });

@@ -30,7 +30,13 @@ function RecipeDetail() {
             <li key={index} className="text-gray-700">{ingredient}</li>
           ))}
         </ul>
-        
+
+        <h2 className="text-2xl font-semibold mt-8">Cooking Instructions</h2>
+        <ol className="list-decimal list-inside mt-2">
+          {recipe.instructions.map((step, index) => (
+            <li key={index} className="text-gray-700 mt-1">{step}</li>
+          ))}
+        </ol>
     </div>
   );
 }

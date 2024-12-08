@@ -1,0 +1,123 @@
+[
+    {
+      "id": 1,
+      "title": "Spaghetti Carbonara",
+      "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 2,
+      "title": "Chicken Tikka Masala",
+      "summary": "Chunks of grilled chicken cooked in a smooth buttery & creamy tomato based gravy.",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 3,
+      "title": "Beef Stroganoff",
+      "summary": "A rich and creamy beef stew with mushrooms and onions, served over noodles.",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 4,
+      "title": "Vegetable Stir Fry",
+      "summary": "A colorful medley of fresh vegetables sautéed in a savory sauce.",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 5,
+      "title": "Chicken Caesar Salad",
+      "summary": "Grilled chicken breast served on a bed of romaine lettuce with Caesar dressing and croutons.",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 6,
+      "title": "Margherita Pizza",
+      "summary": "A simple yet delicious pizza with tomatoes, mozzarella, basil, and olive oil.",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 7,
+      "title": "Lemon Garlic Shrimp",
+      "summary": "Juicy shrimp cooked in a zesty lemon garlic sauce, perfect with pasta or rice.",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 8,
+      "title": "Beef Tacos",
+      "summary": "Seasoned ground beef in a crispy taco shell with lettuce, cheese, and salsa.",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 9,
+      "title": "Pancakes",
+      "summary": "Fluffy pancakes served with butter and maple syrup, a breakfast classic.",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 10,
+      "title": "Grilled Cheese Sandwich",
+      "summary": "Melted cheese between two slices of golden, buttery toast.",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 11,
+      "title": "Tomato Soup",
+      "summary": "A comforting bowl of creamy tomato soup, perfect for dipping grilled cheese.",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 12,
+      "title": "Chocolate Chip Cookies",
+      "summary": "Soft and chewy cookies loaded with chocolate chips.",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 13,
+      "title": "Cauliflower Curry",
+      "summary": "Tender cauliflower florets simmered in a fragrant coconut curry sauce.",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 14,
+      "title": "Eggplant Parmesan",
+      "summary": "Breaded eggplant slices layered with marinara sauce and melted cheese.",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 15,
+      "title": "BBQ Ribs",
+      "summary": "Slow-cooked ribs slathered in a tangy barbecue sauce.",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 16,
+      "title": "Stuffed Bell Peppers",
+      "summary": "Bell peppers stuffed with a savory mixture of rice, meat, and vegetables.",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 17,
+      "title": "Garlic Butter Salmon",
+      "summary": "Salmon fillets baked in a garlic butter sauce, served with asparagus.",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 18,
+      "title": "Greek Salad",
+      "summary": "A refreshing salad with tomatoes, cucumbers, olives, feta, and a lemon vinaigrette.",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 19,
+      "title": "Butternut Squash Soup",
+      "summary": "A creamy and sweet soup made from roasted butternut squash.",
+      "image": "https://via.placeholder.com/150"
+    },
+    {
+      "id": 20,
+      "title": "Apple Pie",
+      "summary": "A classic dessert with a flaky crust and a spiced apple filling.",
+      "image": "https://via.placeholder.com/150"
+    }
+  ]
+  

@@ -11,7 +11,7 @@ function AddRecipeForm({ onAddRecipe }) {
     if (!title) newErrors.title = 'Title is required';
     if (!ingredients) newErrors.ingredients = 'Ingredients are required';
     if (!instructions) newErrors.instructions = 'Instructions are required';
-
+    if (!steps) newErrors.steps = "Steps are required";
     if (ingredients.split('\n').length < 2) {
       newErrors.ingredients = 'Please include at least two ingredients';
     }
@@ -68,6 +68,17 @@ function AddRecipeForm({ onAddRecipe }) {
             className="w-full px-3 py-2 border rounded-md h-24"
           />
           {errors.instructions && <p className="text-red-500 text-sm">{errors.instructions}</p>}
+        </div>
+
+        <div className="mb-4">
+          <label htmlFor="steps" className="block text-gray-700">Steps</label>
+          <textarea
+            id="steps"
+            value={steps}
+            onChange={(e) => setsteps(e.target.value)}
+            className="w-full px-3 py-2 border rounded-md h-24"
+          />
+          {errors.steps && <p className="text-red-500 text-sm">{errors.steps}</p>}
         </div>
 
         <button type="submit" className="w-full bg-blue-500 text-white py-2 rounded-md hover:bg-blue-600">Add Recipe</button>

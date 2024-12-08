@@ -13,6 +13,9 @@ function HomePage() {
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-2xl font-bold text-center mb-8">Recipe List</h1>
+      <Link to="/add-recipe" className="text-blue-500 hover:underline inline-block mb-4">
+        Add New Recipe
+      </Link>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {recipes.map(recipe => (
           <div key={recipe.id} className="bg-white rounded-lg shadow-md hover:scale-105 transition-transform duration-300">

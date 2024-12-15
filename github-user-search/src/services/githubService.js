@@ -18,7 +18,7 @@ export const searchUsers = async (query, location, minRepos) => {
 
   try {
     const response = await axios.get(
-      `${GITHUB_API_URL}/search/users?${params.join("+")}`
+      `https://api.github.com/search/users?${params.join("+")}`
     );
     return response.data.items;
   } catch (error) {

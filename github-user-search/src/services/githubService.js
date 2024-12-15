@@ -12,13 +12,13 @@ export const fetchUserData = async (username) => {
 };
 
 export const searchUsers = async (query, location, minRepos) => {
-  const params = [`q=${query}`];
-  if (location) params.push(`location:${location}`);
-  if (minRepos) params.push(`repos:>${minRepos}`);
+  const q = [`q=${query}`];
+  if (location) q.push(`location:${location}`);
+  if (minRepos) q.push(`repos:>${minRepos}`);
 
   try {
     const response = await axios.get(
-      `https://api.github.com/search/users?${params.join("+")}`
+      `https://api.github.com/search/users?${q.join("+")}`
     );
     return response.data.items;
   } catch (error) {

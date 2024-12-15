@@ -17,7 +17,7 @@ function SearchInput() {
       const userData = await fetchUserData(query);
       setUser(userData);
     } catch (err) {
-      setError("Looks like we can't find the user.");
+      setError("Looks like we cant find the user");
     } finally {
       setLoading(false);
     }
